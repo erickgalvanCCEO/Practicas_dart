@@ -6,6 +6,9 @@ void main() {
   print(persona.name);
   print(persona.age);
   print('Hola mundo');
+
+  final pez = Pez('payaso');
+  pez.moverse();
 }
 
 class Persona {
@@ -35,5 +38,18 @@ class Persona {
 
   set age(String edad) {
     print(edad);
+  }
+}
+
+abstract class Animal {
+  String? nombre;
+  void moverse();
+}
+
+class Pez implements Animal {
+  String? nombre;
+  Pez(this.nombre);
+  void moverse() {
+    print('nadar');
   }
 }
