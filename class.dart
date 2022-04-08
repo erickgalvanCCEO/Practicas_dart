@@ -8,7 +8,9 @@ void main() {
   print('Hola mundo');
 
   final pez = Pez('payaso');
+  final gato = Gato('montes');
   pez.moverse();
+  print(gato.nombre);
 }
 
 class Persona {
@@ -43,6 +45,7 @@ class Persona {
 
 abstract class Animal {
   String? nombre;
+  Animal(this.nombre);
   void moverse();
 }
 
@@ -52,4 +55,13 @@ class Pez implements Animal {
   void moverse() {
     print('nadar');
   }
+
+  String toString() {
+    return 'Nombre $nombre';
+  }
+}
+
+class Gato extends Animal {
+  void moverse() => print('miau');
+  Gato(String nombre) : super(nombre);
 }
