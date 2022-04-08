@@ -2,6 +2,7 @@ void main() {
   final mapPersona = {'Nombre': 'Erick', 'Edad': '20'};
 
   print('es');
+  print('yes');
 
   print(mapPersona);
   print('Hola mundo');
