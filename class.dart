@@ -1,6 +1,8 @@
 void main() {
   final persona = Persona('Erick', 20);
+
   print(persona);
+  print('Hola mundo');
 }
 
 class Persona {
